@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maroc Météo — Weather Analytics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+  <header class="top">
+    <div class="brand">
+      <div class="eyebrow">Weather analytics</div>
+      <h1>Maroc Météo</h1>
+    </div>
+    <div class="top-meta">
+      <span id="updatedAt">—</span>
+      <span class="clock" id="clock">--:--:--</span>
+      <button class="refresh-btn" id="refreshBtn" title="Refresh all data">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 4v6h-6"/></svg>
+        Refresh
+      </button>
+    </div>
+  </header>
+
+  <aside class="sidebar">
+    <div class="sidebar-label">Cities</div>
+    <!-- NEW: Search bar container -->
+    <div class="sidebar-search">
+      <input type="text" id="citySearchInput" placeholder="Search any city (e.g. London)…" autocomplete="off">
+    </div>
+    <ul class="city-list" id="cityList"></ul>
+  </aside>
+
+  <main id="main">
+    <section id="heroSection"></section>
+    <section id="kpiSection">
+      <div class="section-head"><h2>Current conditions</h2><span class="sub" id="kpiSub"></span></div>
+      <div class="kpi-grid" id="kpiGrid"></div>
+    </section>
+    <section id="dailySection">
+      <div class="section-head"><h2>Last 5 days — recorded temperature range</h2><span class="sub">Daily max / min, °C</span></div>
+      <div class="daily-card" id="dailyCard"></div>
+    </section>
+    <section id="hourlySection">
+      <div class="section-head"><h2>Hourly detail — next 24 hours</h2><span class="sub" id="hourlySub"></span></div>
+      <div class="hourly-card">
+        <div class="tabbar" id="tabBar"></div>
+        <div class="chart-wrap" id="chartWrap"></div>
+        <div class="chart-legend" id="chartLegend"></div>
+      </div>
+    </section>
+    <footer class="note">Data from <a href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo</a>. Figures update on load and refresh; timestamps shown in each city's local time.</footer>
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
