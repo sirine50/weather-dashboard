@@ -2,6 +2,9 @@
 
 A clean, responsive, and professional weather analytics web application focused on Moroccan cities, built with vanilla JavaScript, modern CSS, and live data from Open-Meteo APIs.
 
+## LINK
+https://sirine50.github.io/weather-dashboard/
+
 ## Features
 
 - **Live Weather Data:** Real-time temperature, wind speed, humidity, cloud cover, and pressure fetched dynamically via the [Open-Meteo API](https://open-meteo.com/).
